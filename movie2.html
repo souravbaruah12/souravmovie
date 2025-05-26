@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Recommendation UI</title>
+  <link rel="stylesheet" type="text/css" href="movie2.css">
+</head>
+<body>
+  <header>Movie Recommendation UI</header>
+  <div class="controls">
+    <input type="text" id="searchInput" placeholder="Search movies..." onkeyup="filterMovies()" />
+    <select id="sortSelect" onchange="sortMovies()">
+      <option value="default">Sort by</option>
+      <option value="title">Title</option>
+    </select>
+    <select id="genreFilter" onchange="filterMovies()">
+      <option value="all">All Genres</option>
+      <option value="Action">Action</option>
+      <option value="Drama">Drama</option>
+      <option value="TV Shows">TV Shows</option>
+      <option value="Comedy">Comedy</option>
+    </select>
+  </div>
+
+<div class="name">
+  <div class="movie-grid" id="moviegrid">
+    <div class="movie" data-title="movie" data-genre="Action">
+      <h3>Action Movies</h3>
+    </div>
+  </div>
+</div>
+  <div class="movie-grid" id="movieGrid">
+    <div class="movie" data-title="extraction" data-genre="Action">
+      <img src="https://i.pinimg.com/736x/fb/8c/41/fb8c4189e5acb804d7ae80b853a2aa06.jpg" alt="extraction">
+      <div class="movie-title">Extraction</div>
+      <div class="genre-tag">Action</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 6.8/10</div>
+    </div>
+    <div class="movie" data-title="Incaptionr" data-genre="Action">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtrCCJXMt1UJkYx6XnoUz5_juc6yjqGwWoVg&s" alt="incaption">
+      <div class="movie-title">incaption</div>
+      <div class="genre-tag">Action</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 8.8/10</div>
+    </div>
+    <div class="movie" data-title="openhaimer" data-genre="Action">
+      <img src="https://i.pinimg.com/736x/de/05/e0/de05e0c6476d6397764ca1fdf98f875f.jpg" alt="openhaimer">
+      <div class="movie-title">openhaimer</div>
+      <div class="genre-tag">Action</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 8.3/10</div>
+    </div>
+    <div class="movie" data-title="The wolf of eall street" data-genre="Action">
+      <img src="https://i.pinimg.com/736x/e8/eb/0d/e8eb0d27d7dc341eaf6a566238ae17c5.jpg" alt="wolf">
+      <div class="movie-title">The wolf of eall street</div>
+      <div class="genre-tag">Action</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 8.2/10</div>
+    </div>
+    <div class="movie" data-title="jhon wick" data-genre="Action">
+      <img src="https://i.pinimg.com/736x/9c/ff/09/9cff09581a368972414447332c1688bb.jpg" alt="jhon">
+      <div class="movie-title">Jhon wick</div>
+      <div class="genre-tag">Action</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 7.5/10</div>
+    </div>
+    <div class="movie" data-title="fight club" data-genre="Action">
+      <img src="https://i.pinimg.com/736x/32/ac/13/32ac13715abaa6dcf2af047ece9a6fd8.jpg" alt="fight">
+      <div class="movie-title">fight club</div>
+      <div class="genre-tag">Action</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 8.8/10</div>
+    </div>
+    <div class="movie" data-title="mortal engines" data-genre="Action">
+      <img src="https://i.pinimg.com/736x/75/76/e3/7576e334b537280483d76f91b98763c5.jpg" alt="mortal">
+      <div class="movie-title">Mortal Engines</div>
+      <div class="genre-tag">Action</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 6.1/10</div>
+    </div>
+    <div class="movie" data-title="tenet" data-genre="Action">
+      <img src="https://i.pinimg.com/736x/b1/e6/72/b1e672fe00f9c53b0592b42f44cd68bc.jpg" alt="tenet">
+      <div class="movie-title">tenet</div>
+      <div class="genre-tag">Action</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 7.3/10</div>
+    </div>
+    <div class="movie" data-title="interstller" data-genre="Action">
+      <img src="https://i.pinimg.com/736x/73/26/0e/73260e80b7873849c1d514e9fbc45391.jpg" alt="interstller">
+      <div class="movie-title">Interstller</div>
+      <div class="genre-tag">Action</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 8.7/10</div>
+    </div>
+    <div class="movie" data-title="damsel" data-genre="Action">
+      <img src="https://i.pinimg.com/736x/38/26/ae/3826aed238ab75993c800e4f93d856e0.jpg" alt="damsel">
+      <div class="movie-title">Damsel</div>
+      <div class="genre-tag">Action</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 6.1/10</div>
+    </div>
+    <div class="movie" data-title="the martian" data-genre="Action">
+      <img src="https://i.pinimg.com/736x/1b/22/14/1b2214bd2c59a08cf34fb9455393a13b.jpg" alt="martian">
+      <div class="movie-title">The Martian</div>
+      <div class="genre-tag">Action</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 7.9/10</div>
+    </div>
+    <div class="movie" data-title="batman" data-genre="Action">
+      <img src="https://i.pinimg.com/736x/89/cd/5c/89cd5cb9965d93be7ec58da2dfa8cfbc.jpg" alt="batman">
+      <div class="movie-title">The Batman</div>
+      <div class="genre-tag">Action</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 7.8/10</div>
+    </div>
+    <!-- Add more movie cards here -->
+  </div>
+ <!--<tv shows-->
+   <div class="name">
+  <div class="movie-grid" id="moviegrid">
+    <div class="movie" data-title="Tv Shows" data-genre="TV Shows">
+      <h3>TV Shows</h3>
+    </div>
+  </div>
+ </div>
+ -<div class="movie-grid" id="movieGrid">
+    <div class="movie" data-title="Game Of Thrones" data-genre="TV Shows">
+      <img src="https://i.pinimg.com/736x/cb/13/3d/cb133d3ccd5dd67463513d892173753c.jpg" alt="Thrones">
+      <div class="movie-title">Game Of Thrones</div>
+      <div class="genre-tag">TV Shows</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 9.2/10</div>
+    </div>
+    <div class="movie" data-title="Braking Bed" data-genre="TV Shows">
+      <img src="https://i.pinimg.com/736x/fe/9b/68/fe9b686f5d90db771e8b1f7e969f30c9.jpg" alt="braking bed">
+      <div class="movie-title">Braking Bed</div>
+      <div class="genre-tag">TV Shows</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 9.5/10</div>
+    </div>
+    <div class="movie" data-title="Stanger Things" data-genre="TV Shows">
+      <img src="https://i.pinimg.com/736x/88/56/4f/88564fb3a6a56236d00851382b59a036.jpg" alt="Stanger Things">
+      <div class="movie-title">Stanger Things</div>
+      <div class="genre-tag">TV Shows</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 8.6/10</div>
+    </div>
+    <div class="movie" data-title="Alice In Borderlend" data-genre="TV Shows">
+      <img src="https://i.pinimg.com/736x/34/39/cb/3439cb313d4567f48d7ddd0a3821f07b.jpg" alt="Alice in Borderlend">
+      <div class="movie-title">Alice In Borderlend</div>
+      <div class="genre-tag">TV Shows</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 7.8/10</div>
+    </div>
+    <div class="movie" data-title="Wednesday" data-genre="tv Shows">
+      <img src="https://i.pinimg.com/736x/9c/cf/df/9ccfdfa60c559f2d67f60efcf58833df.jpg" alt="Wednesday">
+      <div class="movie-title">Wednesday</div>
+      <div class="genre-tag">tv Shows</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 8/10</div>
+    </div>
+    <div class="movie" data-title="Adolescence" data-genre="tv Shows">
+      <img src="https://i.pinimg.com/736x/50/35/09/503509cb6ef8394c64b6703980ee2134.jpg" alt="Adolescence">
+      <div class="movie-title">Adolescence</div>
+      <div class="genre-tag">tv Shows</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 8.2/10</div>
+    </div>
+    <div class="movie" data-title="vikings" data-genre="tv Shows">
+      <img src="https://i.pinimg.com/736x/ea/01/d3/ea01d339a844c4a53589f1acfa799364.jpg" alt="vikings">
+      <div class="movie-title">Vikings</div>
+      <div class="genre-tag">tv Shows</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 8.5/10</div>
+    </div>
+    <div class="movie" data-title="From" data-genre="tv Shows">
+      <img src="https://i.pinimg.com/736x/f2/44/42/f2444294ba2b3b59832720a958562b45.jpg" alt="from">
+      <div class="movie-title">From</div>
+      <div class="genre-tag">tv Shows</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 7.8/10</div>
+    </div>
+    <div class="movie" data-title="Peaky Blinders" data-genre="tv Shows">
+      <img src="https://i.pinimg.com/736x/6d/2d/b6/6d2db6c8ad3bebffabd48f820de0024d.jpg" alt="Peaky Blinders">
+      <div class="movie-title">Peaky Blinders</div>
+      <div class="genre-tag">tv Shows</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 8.7/10</div>
+    </div>
+    <div class="movie" data-title="The Boys" data-genre="tv Shows">
+      <img src="https://i.pinimg.com/736x/b2/41/80/b24180870857b43810d2abb546c971ab.jpg" alt="the boys">
+      <div class="movie-title">The Boys</div>
+      <div class="genre-tag">tv Shows</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 8.6/10</div>
+    </div>
+    <div class="movie" data-title=" dark" data-genre="tv Shows">
+      <img src="https://i.pinimg.com/736x/e8/2f/82/e82f828f60f7d210d7c8574595c771e9.jpg" alt="dark">
+      <div class="movie-title">Dark</div>
+      <div class="genre-tag">tv Shows</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 8.7/10</div>
+    </div>
+    <div class="movie" data-title="you" data-genre="tv Shows">
+      <img src="https://i.pinimg.com/736x/3a/67/6e/3a676e78354a73fc21cb601fb3dd4828.jpg" alt="you">
+      <div class="movie-title">You</div>
+      <div class="genre-tag">tv Shows</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 7.7/10</div>
+    </div>
+    <!-- Add more movie cards here -->
+  </div>
+<!--<comedy movies-->
+<div class="name">
+  <div class="movie-grid" id="moviegrid">
+    <div class="movie" data-title="movie" data-genre="comedy">
+      <h3>Comedy Movies</h3>
+    </div>
+  </div>
+</div>
+ <div class="movie-grid" id="movieGrid">
+    <div class="movie" data-title="Bulbbul" data-genre="comedy">
+      <img src="https://i.pinimg.com/736x/2d/38/30/2d3830efa2a720e3585f05ff0d4bf18d.jpg" alt="bulbul">
+      <div class="movie-title">Bulbbul</div>
+      <div class="genre-tag">Comedy</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 6.6/10</div>
+    </div>
+     <div class="movie" data-title="Bhool Bhulaiyaa" data-genre="comedy">
+      <img src="https://i.pinimg.com/736x/92/b4/d3/92b4d39c8d4dd75f4dce3c5b710e0247.jpg" alt="Bhool Bhulaiyaa">
+      <div class="movie-title">Bhool Bhulaiyaa</div>
+      <div class="genre-tag">Comedy</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 7.5/10</div>
+    </div>
+     <div class="movie" data-title="Golmaal" data-genre="comedy">
+      <img src="https://i.pinimg.com/736x/6f/2f/e0/6f2fe01486d36f0af50e722c389b9ead.jpg" alt="Golmaal">
+      <div class="movie-title">Golmaal</div>
+      <div class="genre-tag">Comedy</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 7.5/10</div>
+    </div>
+     <div class="movie" data-title="Garam Mosola" data-genre="comedy">
+      <img src="https://i.pinimg.com/736x/e5/4d/68/e54d6865827132ca9dd9993ee0e5a55e.jpg" alt="garom mosola">
+      <div class="movie-title">Garam Masala</div>
+      <div class="genre-tag">comedy</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 6.8/10</div>
+    </div>
+     <div class="movie" data-title="Humgama" data-genre="comedy">
+      <img src="https://i.pinimg.com/736x/9b/94/36/9b9436b35f5c42f2636ed3372eec8cd9.jpg" alt="hungama">
+      <div class="movie-title">Hungama</div>
+      <div class="genre-tag">comedy</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 7.6/10</div>
+    </div>
+     <div class="movie" data-title="Dhol" data-genre="comedy">
+      <img src="https://i.pinimg.com/736x/bf/24/ff/bf24ff751c5da165855cec811bd90016.jpg" alt="dhol">
+      <div class="movie-title">Dhol</div>
+      <div class="genre-tag">comedy</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 6.6/10</div>
+    </div>
+     <div class="movie" data-title="khatta meetha" data-genre="comedy">
+      <img src="https://i.pinimg.com/736x/4e/99/b7/4e99b72c46345b7f9fc6dc2f89b58727.jpg" alt="khatta meetha">
+      <div class="movie-title">Khatta meetha</div>
+      <div class="genre-tag">comedy</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 6.1/10</div>
+    </div>
+     <div class="movie" data-title="hulchul" data-genre="comedy">
+      <img src="https://i.pinimg.com/736x/a6/19/f6/a619f63cc9c36fe6d869e32fcf558db5.jpg" alt="hulchul">
+      <div class="movie-title">hulchul</div>
+      <div class="genre-tag">comedy</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 7.1/10</div>
+    </div>
+     <div class="movie" data-title="happy new year" data-genre="comedy">
+      <img src="https://i.pinimg.com/736x/b0/60/d1/b060d1d263944b508b59907128d9fecf.jpg" alt="new year">
+      <div class="movie-title">Happy New Year</div>
+      <div class="genre-tag">comedy</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 5/10</div>
+    </div>
+     <div class="movie" data-title="munna bhai mbbs" data-genre="comedy">
+      <img src="https://i.pinimg.com/736x/82/8d/86/828d8630c43d1596e0b6d164432e4796.jpg" alt="munna bhai">
+      <div class="movie-title">Munna Bhai M.B.B.S.</div>
+      <div class="genre-tag">comedy</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 8.1/10</div>
+    </div>
+    <div class="movie" data-title="de dana dan" data-genre="comedy">
+      <img src="https://i.pinimg.com/736x/85/ee/3b/85ee3b7e605d05179e3a5a7dae547029.jpg" alt=" de dana dan">
+      <div class="movie-title">De Dana Dan</div>
+      <div class="genre-tag">comedy</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 5.9/10</div>
+    </div>
+    <div class="movie" data-title="welcome" data-genre="comedy">
+      <img src="https://i.pinimg.com/736x/b9/0c/27/b90c27cd393cfd5235f57a5c0c9339ca.jpg" alt="welcome">
+      <div class="movie-title">Welcome</div>
+      <div class="genre-tag">comedy</div>
+      <button class="like-button">Like</button>
+      <div class="rating">IMDb: 7.1/10</div>
+    </div>
+    <!-- Add more movie cards here -->
+  </div>
+
+  <script src="movie2.js"></script>
+
+</body>
+</html>
